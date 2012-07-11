@@ -1,0 +1,45 @@
+<preface id="preface" xreflabel="preface">
+ <title>Preface</title>
+
+ <para>
+  The main purpose of the APBS Roll is to install and configure the
+  <ulink url="http://apbs.sourceforge.net/">APBS</ulink> package on
+  <ulink
+  url="http://www.rocksclusters.org">Rocks</ulink> clusters.
+ </para>
+
+ <para>
+  <ulink url="http://apbs.sourceforge.net/">APBS (Adaptive
+   Poisson-Boltzmann Solver)</ulink> is a software package for the
+   numerical solution of the Poisson-Boltzmann equation (PBE), one of
+   the most popular continuum models for describing electrostatic
+   interactions between molecular solutes in salty, aqueous
+   media. APBS was designed to efficiently evaluate electrostatic
+   properties for a wide range of length scales to enable the
+   investigation of molecules with tens to millions of atoms.
+ </para>
+
+ <para>
+  The APBS Roll can be downloaded from the <ulink
+   url="http://sourceforge.net/projects/apbs"> APBS download
+   site</ulink> and the Roll documentation including installation and
+   usage information is available on the <ulink
+   url="http://www.nbcr.net/data/docs/rolls/apbs/&document-version;">NBCR web
+   site</ulink>.
+ </para>
+
+ <note>
+  <para>
+   The APBS Roll version number reflects version of Rocks for which
+   this Roll is packaged, e.g., roll <literal>apbs-&document-version;</literal>
+   will contain APBS for Rocks version &document-version;.
+  </para>
+ </note>
+
+ <para>
+  The Roll is being developed by Robert Konecny
+  &lt;rok&#064;ucsd.edu&gt; with help from Greg Bruno, Nadya Williams,
+  Todd Dolinsky and Nathan Baker.
+ </para>
+
+</preface>

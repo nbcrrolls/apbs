@@ -1,0 +1,23 @@
+<?xml version="1.0" standalone="no"?>
+
+<kickstart>
+
+<description>
+Install the APBS package and configure them on a Rocks cluster.
+</description>
+
+<changelog>
+$Log: apbs-common.xml,v $
+Revision 1.1  2012/07/11 02:12:47  nadya
+initial revision. Based on roll from Robert Konecny
+
+</changelog>
+
+<package>apbs-rocks</package>
+<package>apbs-rocks-pdb2pqr</package>
+<package>rocks-apbs</package>
+
+<post>
+</post>
+
+</kickstart> 

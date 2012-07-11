@@ -1,0 +1,44 @@
+<?xml version="1.0" standalone="no"?>
+
+<graph>
+
+<description>
+The APBS Roll.
+
+This roll contains APBS package and it configures it for use on a
+Rocks cluster.
+
+</description>
+
+<changelog>
+$Log: apbs.xml,v $
+Revision 1.1  2012/07/11 02:12:47  nadya
+initial revision. Based on roll from Robert Konecny
+
+
+These log is preserved from original roll:
+Revision 1.4  2005-06-22 00:27:35  rok
+deleted line to comply with 4.0.0
+
+Revision 1.3  2004/12/09 20:28:44  rok
+fixed names of graph edge, making it more general
+
+Revision 1.2  2004/12/01 02:15:02  rok
+Fixed a few bugs with Greg, added opteron support, ready for release
+
+Revision 1.1.1.1  2004/11/28 23:40:05  rok
+APBS roll module inport
+
+</changelog>
+
+<edge from="server" to="apbs-common"/>
+<edge from="client" to="apbs-common"/>
+
+<!-- opal deployment -->
+<edge from="client" to="apbs-server" cond="opal_server"/>
+<edge from="server" to="apbs-server"/>
+<order head="opal-common">
+    <tail>apbs-server</tail>
+</order>
+
+</graph>

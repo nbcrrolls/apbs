@@ -1,0 +1,68 @@
+<chapter id="using" xreflabel="Using the APBS Roll">
+<title>Using the APBS Roll</title>
+
+<simplesect>
+<title>How to use the APBS package</title>
+
+<para>
+For detailed information on how to use <ulink
+url="http://apbs.sourceforge.net/">APBS</ulink> please see <ulink
+url="http://apbs.sourceforge.net/doc/index.html">APBS documentation</ulink> and
+<ulink url="http://apbs.sourceforge.net/doc/tutorial/index.html"> APBS tutorial</ulink>.
+</para>
+
+<para>
+In addition to tools available in <literal>/opt/apbs/share/tools</literal>
+directory you may find very useful the <ulink
+url="http://pdb2pqr.nbcr.net">PDB2PQR web service</ulink> which
+vastly simplifies preparation of APBS input files. Command line
+version of this utility is available in
+<literal>/opt/apbs/pdb2pqr</literal> as <literal>pdb2pqr.py</literal>.
+</para>
+
+<para>
+For additional help there are two APBS <ulink
+url="http://apbs.sourceforge.net/#lists">maling lists</ulink>:
+<literal>apbs-users</literal> and
+<literal>apbs-announce</literal>. The list archives are excellent
+source in case you have any problems using APBS.
+</para>
+
+</simplesect>
+
+<simplesect>
+<title>Using APBS with SGE</title>
+
+<para>
+If you wish to use APBS on the cluster together with SGE scheduling
+you can modify and use the following SGE script template:
+</para>
+
+<screen>
+#!/bin/csh -f
+#$ -cwd
+#
+#$ -N apbs-PARALLEL
+#$ -e apbs-PARALLEL.errout
+#$ -o apbs-PARALLEL.errout
+#
+# requesting 8 processors
+#$ -pe mpi 8
+setenv NCPU 8
+
+echo -n "Running on master node (using $NCPU CPUs): "
+hostname
+
+setenv APBSBIN /opt/apbs/bin/apbs
+setenv MPIRUN /opt/openmpi/bin/mpirun
+
+echo "Starting apbs-PARALLEL calculation ..."  
+$MPIRUN --hostfile $TMPDIR/machines -np $NCPU \
+    $APBSBIN apbs-PARALLEL.in &gt;& apbs-PARALLEL.out
+
+echo "Done."
+</screen>
+
+</simplesect>
+
+</chapter>

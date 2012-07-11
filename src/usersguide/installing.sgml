@@ -1,0 +1,19 @@
+<chapter id="installing" xreflabel="Installing">
+
+<title>Installing APBS Roll</title>
+
+<para>
+The APBS Roll is available for the x86_64 architecture only. Make
+sure you choose the correct iso image with the right APBS Roll for
+your specific hardware.
+</para>
+
+<para>
+Technical details: The x86_64 APBS executable
+was compiled with Intel x86_64 compiler version 11.1 and OpenMPI 1.4.3.
+</para>
+
+&source-roll-installing-standard;
+&source-roll-installing-onthefly;
+
+</chapter>

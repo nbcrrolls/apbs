@@ -1,0 +1,13 @@
+<chapter id="requirements" xreflabel="Requirements">
+<title>Requirements</title>
+
+<para>
+This APBS Roll is for use with Rocks version &document-version;.
+The APBS Roll does not require any other rolls, except the base Rocks roll.
+</para>
+
+<para>
+This APBS Roll contains APBS version @APBS.VERSION@.
+</para>
+
+</chapter>

@@ -1,0 +1,32 @@
+<!DOCTYPE book PUBLIC "-//OASIS//DTD DocBook V3.1//EN" [
+        <!ENTITY % entities SYSTEM "entities.sgml">
+        %entities;
+]>
+
+<book>
+<bookinfo>
+
+	<title> APBS Roll: Users Guide </title>
+	<edition>Version &document-version;</edition>
+	<pubdate>&document-pubdate;</pubdate>
+	<copyright id="copyright" xreflabel="copyright">
+		<year>&document-year;</year>
+		<holder>&document-copyright;</holder>
+	</copyright>
+
+	<releaseinfo>
+	        The current release of the APBS Roll is @VERSION@ which
+		contains APBS version @APBS.VERSION@.  <ulink
+		url="roll-apbs-usersguide.pdf">(PDF version)</ulink>
+	</releaseinfo>
+
+</bookinfo>
+
+&source-preface;
+&source-requirements;
+&source-installing;
+&source-using;
+&source-copyrights;
+
+</book>
+

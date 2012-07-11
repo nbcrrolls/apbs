@@ -1,0 +1,82 @@
+<appConfig xmlns="http://nbcr.sdsc.edu/opal/types"
+           xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <metadata appName="APBS parallel 1.3">
+    <usage><![CDATA[Adaptive Poisson-Boltzmann Solver (APBS) is a software package for the numerical 
+solution of the Poisson-Boltzmann equation (PBE), one of the most popular continuum models for describing 
+electrostatic interactions between molecular solutes in salty, aqueous media.<BR><BR>
+apbs version: 1.3
+]]></usage>
+    <info>
+    <![CDATA[
+        apbs [options] apbs.in
+
+        where apbs.in is a formatted input file and [options] are:
+
+        --output-file=<name>     Enables output logging to the path listed in <name>. 
+        --help                   Display this help information.
+        --version                Display the current APBS version.
+    ]]>
+    </info>
+
+    <types> 
+        <!-- list of untagged parameters, in order -->
+        <taggedParams>
+
+            <param>
+                <id>procs</id>
+                <tag>-procs</tag>
+                <paramType>STRING</paramType>
+                <ioType>INPUT</ioType>
+                <textDesc>Number of processors</textDesc>
+            </param>
+
+            <param>
+                <id>molecule</id>
+                <tag>-molecule</tag>
+                <paramType>FILE</paramType>
+                <ioType>INPUT</ioType>
+                <textDesc>Input molecule</textDesc>
+            </param>
+
+            <param>
+                <id>input</id>
+                <tag>-input</tag>
+                <paramType>FILE</paramType>
+                <ioType>INPUT</ioType>
+                <textDesc>Configuration file</textDesc>
+            </param>
+
+            <param>
+                <id>outfile</id>
+                <tag>-outfile</tag>
+                <paramType>STRING</paramType>
+                <ioType>INPUT</ioType>
+                <textDesc>Output file name</textDesc>
+            </param>
+
+        </taggedParams>
+
+        <groups>
+
+          <group>
+            <name>inputs</name>
+            <elements>procs molecule input</elements>
+            <required>true</required>
+            <textDesc>Input information</textDesc>
+          </group>
+
+          <group>
+            <name>outputs</name>
+            <elements>outfile </elements>
+            <required>false</required>
+            <textDesc>Output information</textDesc>
+          </group>
+
+        </groups>
+
+      </types>
+  </metadata>
+  <binaryLocation>/opt/apbs-1.3/bin/apbs.sh</binaryLocation>
+  <jobManagerFQCN>edu.sdsc.nbcr.opal.manager.ForkJobManager</jobManagerFQCN>
+  <parallel>false</parallel>
+</appConfig>
