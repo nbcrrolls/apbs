@@ -8,13 +8,15 @@ Install the APBS package and configure them on a Rocks cluster.
 
 <changelog>
 $Log: apbs-common.xml,v $
+Revision 1.2  2012/07/20 00:16:02  nadya
+rm fossils
+
 Revision 1.1  2012/07/11 02:12:47  nadya
 initial revision. Based on roll from Robert Konecny
 
 </changelog>
 
 <package>apbs-rocks</package>
-<package>apbs-rocks-pdb2pqr</package>
 <package>rocks-apbs</package>
 
 <post>
