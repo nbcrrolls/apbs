@@ -21,28 +21,4 @@ initial revision. Based on roll from Robert Konecny
 <package>apbs-opal</package>
 <package>roll-apbs-usersguide</package>
 
-<post>
-if test -d /opt/opal; then
-
-<file name="/opt/opal/deployed/deploy.sh" mode="append">
-
-# apbs 1.3 serial
-apbsver=1.3
-apbs_bin=/opt/apbs-1.3/bin/apbs
-if test -e $apbs_bin; then
-    $ANT -f $OPALXML deploy -DserviceName=apbs_${apbsver} -DappConfig=$OPALCONFIG/apbs_${apbsver}.xml
-fi
-
-# apbs 1.3 parallel
-apbsver=1.3
-apbs_bin=/opt/apbs-1.3/bin/apbs.sh
-if test -e $apbs_bin; then
-    $ANT -f $OPALXML deploy -DserviceName=apbs_parallel_${apbsver} -DappConfig=$OPALCONFIG/apbs_parallel_${apbsver}.xml
-fi
-
-</file>
-fi
-
-</post>
-
 </kickstart> 
