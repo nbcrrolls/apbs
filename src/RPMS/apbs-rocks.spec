@@ -11,8 +11,8 @@
 ## Author:  Robert Konecny
 ## ###########################################################################
 
-###%define _topdir /export/home/rok/rpmbuild/rpmbuild
-%define apbs_version 1.3
+%define _topdir ZZZBUILDROOTZZZ
+%define apbs_version ZZZVERSIONZZZ
 %define apbs_rel 2
 %define rpm_name apbs-rocks
 %define buildroot %{_topdir}/%{rpm_name}-%{apbs_version}-root
@@ -70,13 +70,8 @@ echo "Buidling for: arch: ${arch}, host: ${host}"
 
 # parallel
 pushd apbs-%{version}-source
-export CC=icc
-export CXX=icc
-export FC=ifort
-export F77=ifort
-export F90=ifort
 export CPPFLAGS="-I/opt/openmpi/include"
-export LDFLAGS="-i-static -L/opt/openmpi/lib -lmpi"
+export LDFLAGS="-static -L/opt/openmpi/lib -lmpi"
 MPI_DIR=/opt/openmpi
 #./configure --prefix=${RPM_BUILD_ROOT}/%{prefix} --with-openmpi=${MPI_DIR}
 ./configure --with-openmpi=${MPI_DIR}
