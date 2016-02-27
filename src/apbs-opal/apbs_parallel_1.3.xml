@@ -4,7 +4,7 @@
     <usage><![CDATA[Adaptive Poisson-Boltzmann Solver (APBS) is a software package for the numerical 
 solution of the Poisson-Boltzmann equation (PBE), one of the most popular continuum models for describing 
 electrostatic interactions between molecular solutes in salty, aqueous media. 
-APBS v.1.3. Tutorial: http://www.nbcr.net/data/docs/wshelp/apbs_parallel
+APBS v.1.3. Tutorial: http://nbcr.ucsd.edu/data/docs/wshelp/apbs_parallel
 ]]></usage>
     <info>
     <![CDATA[
@@ -37,7 +37,7 @@ APBS v.1.3. Tutorial: http://www.nbcr.net/data/docs/wshelp/apbs_parallel
                 <paramType>FILE</paramType>
                 <ioType>INPUT</ioType>
                 <textDesc>Molecule file
-                          (ex: &lt;a href="http://www.nbcr.net/data/docs/wshelp/apbs_parallel/input/1hpx.pqr"&gt;1hpx.pqr&lt;/a&gt;)
+                          (ex: &lt;a href="http://nbcr.ucsd.edu/data/docs/wshelp/apbs_parallel/input/1hpx.pqr"&gt;1hpx.pqr&lt;/a&gt;)
                 </textDesc>
             </param>
 
@@ -47,7 +47,7 @@ APBS v.1.3. Tutorial: http://www.nbcr.net/data/docs/wshelp/apbs_parallel
                 <paramType>FILE</paramType>
                 <ioType>INPUT</ioType>
                 <textDesc>Configuration file 
-                          (ex: &lt;a href="http://www.nbcr.net/data/docs/wshelp/apbs_parallel/input/1hpx.in.pot"&gt;1hpx.in.pot&lt;/a&gt;)
+                          (ex: &lt;a href="http://nbcr.ucsd.edu/data/docs/wshelp/apbs_parallel/input/1hpx.in.pot"&gt;1hpx.in.pot&lt;/a&gt;)
                 </textDesc>
             </param>
 
