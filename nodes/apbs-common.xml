@@ -18,6 +18,7 @@ initial revision. Based on roll from Robert Konecny
 
 <package>apbs-rocks</package>
 <package>rocks-apbs</package>
+<package>apbs</package>
 
 <post>
 </post>

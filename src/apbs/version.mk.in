@@ -1,0 +1,7 @@
+RELEASE = 0
+VERSION = $(CURRENT)
+
+NAME		= apbs
+PKGROOT         = /opt/$(NAME)-$(VERSION)
+TARBALL_POSTFIX	= tar.gz
+

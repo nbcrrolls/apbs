@@ -1,5 +1,5 @@
 PKGROOT         = /opt/opal/deployed/
-APBSBIN         = /opt/apbs-1.3/bin/
+APBSDIR         = /opt/apbs
 NAME            = apbs-opal
-RELEASE         = 0
+RELEASE         = 1
 

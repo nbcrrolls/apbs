@@ -1,10 +1,10 @@
 <appConfig xmlns="http://nbcr.sdsc.edu/opal/types"
            xmlns:xsd="http://www.w3.org/2001/XMLSchema">
-  <metadata appName="APBS parallel 1.3">
+  <metadata appName="APBS parallel @VERSION@">
     <usage><![CDATA[Adaptive Poisson-Boltzmann Solver (APBS) is a software package for the numerical 
 solution of the Poisson-Boltzmann equation (PBE), one of the most popular continuum models for describing 
 electrostatic interactions between molecular solutes in salty, aqueous media. 
-APBS v.1.3. Tutorial: http://www.nbcr.net/data/docs/wshelp/apbs_parallel
+APBS v.@VERSION@ Tutorial: http://www.nbcr.net/data/docs/wshelp/apbs_parallel
 ]]></usage>
     <info>
     <![CDATA[
@@ -81,7 +81,7 @@ APBS v.1.3. Tutorial: http://www.nbcr.net/data/docs/wshelp/apbs_parallel
 
       </types>
   </metadata>
-  <binaryLocation>/opt/apbs-1.3/bin/apbs.sh</binaryLocation>
+  <binaryLocation>/opt/apbs-@VERSION@/bin/apbs.sh</binaryLocation>
   <jobManagerFQCN>edu.sdsc.nbcr.opal.manager.ForkJobManager</jobManagerFQCN>
   <parallel>false</parallel>
 </appConfig>

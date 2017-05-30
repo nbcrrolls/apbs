@@ -1,6 +1,6 @@
 #!/bin/bash
 
-apbs=/opt/apbs/bin/apbs
+apbs=/opt/apbs-@VERSION@/bin/apbs
 mpirun=/opt/openmpi/bin/mpirun
 
 if test -z "$apbs" ; then

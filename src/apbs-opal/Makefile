@@ -64,21 +64,50 @@ REDHAT.ROOT = $(CURDIR)/../../
 
 -include $(ROCKSROOT)/etc/Rules.mk
 include Rules.mk
-FILES	= apbs_1.3.xml apbs_parallel_1.3.xml
+include $(REDHAT.ROOT)/apbs.mk
 
-build:
-	echo build
+XMLFILES = apbs_$(CURRENT).xml apbs_parallel_$(CURRENT).xml \
+           apbs_$(LAST).xml apbs_parallel_$(LAST).xml 
+SHFILES = apbs_$(CURRENT).sh apbs_$(LAST).sh
+
+CURRENTSED = \
+        -e s%@VERSION@%$(CURRENT)%g
+
+LASTSED = \
+        -e s%@VERSION@%$(LAST)%g
+
+build: $(XMLFILES) $(SHFILES) 
 	
+apbs_$(CURRENT).sh: apbs.sh.in
+	$(SED)  $(CURRENTSED) $^ > $@
+
+apbs_$(CURRENT).xml: apbs.xml.in
+	$(SED)  $(CURRENTSED) $^ > $@
+
+apbs_parallel_$(CURRENT).xml: apbs_parallel.xml.in
+	$(SED)  $(CURRENTSED) $^ > $@
+
+apbs_$(LAST).sh: apbs.sh.in
+	$(SED)  $(LASTSED) $^ > $@
+
+apbs_$(LAST).xml: apbs.xml.in
+	$(SED)  $(LASTSED) $^ > $@
+
+apbs_parallel_$(LAST).xml: apbs_parallel.xml.in
+	$(SED)  $(LASTSED) $^ > $@
+
 install::
 	mkdir -p $(ROOT)/$(PKGROOT)
 	(\
-		for i in $(FILES);do\
+		for i in $(XMLFILES); do\
 			install -m644 -t $(ROOT)/$(PKGROOT) $$i;\
 		done\
 	)
-	mkdir -p $(ROOT)/$(APBSBIN)
-	install -m755 apbs.sh  $(ROOT)/$(APBSBIN)
-
+	mkdir -p $(ROOT)/$(APBSDIR)-$(CURRENT)/bin
+	install -m755 apbs_$(CURRENT).sh  $(ROOT)/$(APBSDIR)-$(CURRENT)/bin/apbs.sh
+	mkdir -p $(ROOT)/$(APBSDIR)-$(LAST)/bin
+	install -m755 apbs_$(LAST).sh  $(ROOT)/$(APBSDIR)-$(LAST)/bin/apbs.sh
 
 clean::
 	rm -rf $(NAME)-$(VERSION)
+	rm -rf $(XMLFILES) $(SHFILES)

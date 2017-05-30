@@ -1,10 +1,10 @@
 <appConfig xmlns="http://nbcr.sdsc.edu/opal/types"
         xmlns:xsd="http://www.w3.org/2001/XMLSchema">
-  <metadata appName="APBS 1.3">
+  <metadata appName="APBS @VERSION@">
     <usage><![CDATA[Adaptive Poisson-Boltzmann Solver (APBS) is a software package for the numerical solution 
 of the Poisson-Boltzmann equation (PBE), one of the most popular continuum models for describing electrostatic 
-interactions between molecular solutes in salty, aqueous media. 
-Tutorial: http://www.nbcr.net/data/docs/wshelp/apbs. APBS version 1.3]]></usage>
+interactions between molecular solutes in salty, aqueous media. APBS v.@VERSION@
+Tutorial: http://www.nbcr.net/data/docs/wshelp/apbs ]]></usage>
     <info>
     <![CDATA[
       apbs [options] apbs.in
@@ -18,6 +18,6 @@ Tutorial: http://www.nbcr.net/data/docs/wshelp/apbs. APBS version 1.3]]></usage>
     </info>
 
   </metadata>
-  <binaryLocation>/opt/apbs-1.3/bin/apbs</binaryLocation>
+  <binaryLocation>/opt/apbs-@VERSION@/bin/apbs</binaryLocation>
   <parallel>false</parallel>
 </appConfig>
