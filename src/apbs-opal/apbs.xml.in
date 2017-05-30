@@ -3,8 +3,8 @@
   <metadata appName="APBS @VERSION@">
     <usage><![CDATA[Adaptive Poisson-Boltzmann Solver (APBS) is a software package for the numerical solution 
 of the Poisson-Boltzmann equation (PBE), one of the most popular continuum models for describing electrostatic 
-interactions between molecular solutes in salty, aqueous media. APBS v.@VERSION@
-Tutorial: http://www.nbcr.net/data/docs/wshelp/apbs ]]></usage>
+interactions between molecular solutes in salty, aqueous media. 
+Tutorial: http://nbcr.ucsd.edu/data/docs/wshelp/apbs APBS version @VERSION@]]></usage>
     <info>
     <![CDATA[
       apbs [options] apbs.in
